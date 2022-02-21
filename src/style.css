@@ -1,0 +1,14 @@
+* {
+    box-sizing: border-box;
+    font-family: cursive;
+}
+
+body {
+    width: 600px;
+    margin: 10px auto;
+    background-color: rgb(65, 64, 64);
+}
+
+h1 {
+    text-align: center;
+}
