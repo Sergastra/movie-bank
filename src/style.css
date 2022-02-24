@@ -4,17 +4,16 @@
 }
 
 body {
-    width: 600px;
-    margin: 10px auto;
     background-color: rgb(65, 64, 64);
 }
 
-h1 {
+h1, h2 {
     text-align: center;
     background-color: aqua;
 }
 
 #form-container {
+    width: 500px;
     margin: 20px auto;
     padding: 10px;
 }
@@ -30,4 +29,27 @@ input{
 
 label{
     margin: 4px;
+}
+
+#result-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 40px auto;
+    padding: 16px;
+    border: 2px solid aqua;
+    border-radius: 6px;
+}
+
+.movie-details {
+    width: min-content;
+    background-color: aliceblue;
+    padding: 10px;
+    border: 2px solid aqua;
+    margin: 10px;
+}
+
+figure>img{
+    width: 150px;
+    height: 250px;
 }
