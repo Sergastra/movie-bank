@@ -1,6 +1,6 @@
 import React, {useState, createRef} from 'react';
 import ReactDOM from 'react-dom';
-
+import axios from 'axios';
 import './style.css';
 
 
@@ -43,13 +43,18 @@ function Form(props){
 }
 
 
+
 function App(){
 
   const handleClick = title => {
     console.log(title);
     
     let api_key = 'edb978d';
-    let url = 'http://www.omdbapi.com/?apikey= ${api_key}&t= ${title}';
+    let url = 'http://www.omdbapi.com/?apikey= ${api_key}&s= ${title}';
+
+
+    axios.get(url)
+      .then(response => console.log('response :>>', response));
   };
 
   return (
