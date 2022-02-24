@@ -11,4 +11,23 @@ body {
 
 h1 {
     text-align: center;
+    background-color: aqua;
+}
+
+#form-container {
+    margin: 20px auto;
+    padding: 10px;
+}
+
+input,
+label{
+    display: block;
+}
+
+input{
+    margin-bottom: 16px;
+}
+
+label{
+    margin: 4px;
 }
