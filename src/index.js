@@ -1,6 +1,7 @@
-import React, {useState, createRef} from 'react';
+import React, {useState, createRef, useEffect} from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
+import Pagination from './Pagination';
 import './style.css';
 
 
@@ -90,12 +91,13 @@ function Movie(props) {
 function App() {
   const [ titles, setTitles ] = useState([]);
   const [ results, setResults ] = useState([]);
+  const [ page, setPage ] = useState([]);
 
   const handleClick = title => {
     setTitles(title);
 
     let api_key = 'edb978d';
-    let url = `http://www.omdbapi.com/?apikey=${api_key}&s=${title}`;
+    let url = `http://www.omdbapi.com/?apikey=${api_key}&s=${title}&page=${page}`;
     
     axios.get(url)
         .then(response => {console.log('response :>>', response)
@@ -103,14 +105,21 @@ function App() {
     });
   };
 
+  useEffect(() => {
+     ;
+  },[page]);
+ 
+
   return (
       <>
         <h1> Movie Bank</h1>
         <Form onClick={ handleClick } />
+        <Pagination setPage={setPage} />
         <Results 
           title={ titles }
           results={ results } 
         />
+        <Pagination setPage={setPage} />
       </>
   );
   

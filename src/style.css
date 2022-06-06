@@ -53,3 +53,13 @@ figure>img{
     width: 150px;
     height: 250px;
 }
+
+.page-pagination {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    background: aqua;
+    font-weight: 700;
+
+}
